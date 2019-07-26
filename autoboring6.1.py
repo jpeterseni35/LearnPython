@@ -6,6 +6,9 @@ while True:
         break
 print('Thank you!')
 
-
+# Infinite loop example
 while True:
     print('Hello!')
+
+
+
