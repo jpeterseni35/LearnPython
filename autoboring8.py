@@ -6,7 +6,7 @@ import os
 import math
 # random.randint(1, 10)
 
-from random import *
+# from random import *
 randint(1, 10)
 
 print('Hello')
