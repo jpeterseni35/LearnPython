@@ -6,11 +6,13 @@ import os
 import math
 random.randint(1, 10)
 
-# from random import *
-# randint(1, 10)
+
+from random import *
+x = randint(1, 10)
+print(x)
 
 print('Hello')
-sys.exit()
+# sys.exit()
 print('Goodbye')
 
 
