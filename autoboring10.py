@@ -4,10 +4,34 @@
 # spam()
 
 
+# def spam():
+#     eggs = 'Hello'
+#     print(eggs)
+
+
+# eggs = 42
+# spam()
+# print(eggs)
+
+
+# def spam():
+#     eggs = 99
+#     bacon()
+#     print(eggs)
+
+# def bacon():
+#     ham = 101
+#     eggs = 0
+
+# spam()
+
+
 def spam():
-    eggs = 'Hello'
+    global eggs
+    eggs = 99
     print(eggs)
 
-eggs = 42
+
+# eggs = 42
 spam()
 print(eggs)
