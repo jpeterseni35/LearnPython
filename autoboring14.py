@@ -26,3 +26,31 @@ supplies = ['pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pen
 
 for i in range(len(supplies)):
     print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+
+cat = ['fat', 'orange', 'loud']
+
+# multiple assignment trick
+size, color, disposition = cat
+
+size
+color
+
+size, color, disposition = 'skinny', 'black', 'quiet'
+size
+
+# swap variables - this is a way you can quickly swap the value of variables
+
+a = 'AAA'
+b = 'BBB'
+a, b = b, a
+a
+b
+
+# augmented assignment operators
+
+spam = 42
+spam = spam + 1
+
+# the above and below are the same
+
+spam += 1
