@@ -1,3 +1,4 @@
+import copy
 spam = ['hello', 'hi', 'howdy', 'heyas']
 spam.index('hello')  # returns 0
 
@@ -63,3 +64,11 @@ eggs = ('howdy', 'hello', 'sup', 'brah')  # this is not a list but a tuple.
 eggs = ['howdy', 'hello', 'sup', 'brah']
 eggs = tuple(eggs)
 eggs
+
+spam = ['A', 'B', 'C', 'D']
+id(spam)
+cheese = copy.copy(spam)
+id(cheese)
+cheese[1] = 42
+spam
+cheese
