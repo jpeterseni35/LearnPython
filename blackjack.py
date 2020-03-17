@@ -49,10 +49,8 @@ def main():
         pot += bet * 2  # Dealer matches the player's bet.
         money -= bet
         deck = getDeck()
-        dealerHand = [('A', '♠'), ('Q', '♠')]
-        # dealerHand = [deck.pop(), deck.pop()]
-        playerHand = [('Q', '♥'), ('A', '♥')]
-        # playerHand = [deck.pop(), deck.pop()]
+        dealerHand = [deck.pop(), deck.pop()]
+        playerHand = [deck.pop(), deck.pop()]
 
         # Handle player actions:
         print('Pot:', pot)
