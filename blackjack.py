@@ -28,7 +28,7 @@ def main():
     (S)tand to stop taking cards.
     On your first play, you can (D)ouble down to increase your bet
     but must hit exactly one more time before standing.
-    In case of a tie, the pot carries over to the next round.
+    In case of a tie, your bet is returned.
     The dealer stops hitting themselves at 17.''')
 
     money = 100
