@@ -1,6 +1,6 @@
 {
     "editor.tabCompletion": "on",
     "python.linting.pylintEnabled": true,
-    "python.linting.pep8Enabled": true,
+    "python.linting.pycodestyleEnabled": true,
     "python.linting.enabled": true
 }
