@@ -5,6 +5,7 @@ __version__ = 1
 
 import random
 import sys
+import time
 
 # Setup constants:
 HEARTS = chr(9829)  # Character 9829 is '♥'.
@@ -50,9 +51,9 @@ def main():
         money -= bet
         deck = getDeck()
         dealerHand = [deck.pop(), deck.pop()]
-        # playerHand = [deck.pop(), deck.pop()]
+        playerHand = [deck.pop(), deck.pop()]
         # dealerHand = [('A', '♠'), ('Q', '♠')]
-        playerHand = [('8', '♥'), ('9', '♥')]
+        # playerHand = [('10', '♥'), ('A', '♥')]
 
         # Handle player actions:
         print('Pot:', pot)
@@ -65,7 +66,7 @@ def main():
                 break
 
             # Check if the player has BLACKJACK:
-            if getCardValue(playerHand) == 21:
+            if getCardValue(playerHand) == 21 and len(playerHand) == 2:
                 break
 
             # Get the player's move, either H, S, or D:
@@ -98,16 +99,18 @@ def main():
             # At this point, go back to the start of the loop.
 
         # Handle the dealer's actions:
-        if getCardValue(playerHand) < 21:
+        if (getCardValue(playerHand) < 21 or (getCardValue(playerHand) == 21
+                                              and len(playerHand) > 2)):
             while getCardValue(dealerHand) < 17:
-                # The dealer hits:
-                print('Dealer hits...')
+                # Show Dealers Cards
+                showHands(playerHand, dealerHand, True)
+                # The Dealer Hits
+                print('\n Dealer hits...\n')
+                time.sleep(2.5)
                 dealerHand.append(deck.pop())
-                showHands(playerHand, dealerHand, False)
 
                 if getCardValue(dealerHand) > 21:
                     break  # The dealer has busted.
-                pause()
 
         showHands(playerHand, dealerHand, True)  # Show the final hands.
 
@@ -130,7 +133,15 @@ def main():
             pot = 0  # Reset the pot.
 
         elif (getCardValue(playerHand) > getCardValue(dealerHand) and
-              getCardValue(playerHand) != 21):
+              (getCardValue(playerHand) != 21 or getCardValue(playerHand) ==
+               21 and len(playerHand) > 2)):
+
+            print('You won ${}!'.format(pot))
+            money += pot
+            pot = 0  # Reset the pot
+
+        elif (getCardValue(playerHand) > getCardValue(dealerHand) and
+              getCardValue(playerHand) == 21 and len(playerHand) > 2):
 
             print('You won ${}!'.format(pot))
             money += pot
