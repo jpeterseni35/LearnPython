@@ -50,7 +50,9 @@ def main():
         money -= bet
         deck = getDeck()
         dealerHand = [deck.pop(), deck.pop()]
-        playerHand = [deck.pop(), deck.pop()]
+        # playerHand = [deck.pop(), deck.pop()]
+        # dealerHand = [('A', '♠'), ('Q', '♠')]
+        playerHand = [('8', '♥'), ('9', '♥')]
 
         # Handle player actions:
         print('Pot:', pot)
@@ -110,15 +112,16 @@ def main():
         showHands(playerHand, dealerHand, True)  # Show the final hands.
 
         # Handle whether the player won, lost, or tied.
-        if getCardValue(playerHand) == 21 and getCardValue(dealerHand) < 21:
-            pot = pot * 1.25  # Blackjack pays 3:2
+        if (getCardValue(playerHand) == 21 and len(playerHand) == 2 and
+                getCardValue(dealerHand) < 21):
+            pot *= 1.25  # Blackjack pays 3:2
             money += pot
             print('BLACKJACK! You won ${}!'.format(pot))
             pot = 0  # Reset the pot
 
         elif getCardValue(dealerHand) > 21:
             print('Dealer busts! You win ${}!'.format(pot))
-            money += (pot * 1.25)
+            money += pot
             pot = 0  # Reset the pot.
 
         elif (getCardValue(playerHand) > 21) or (getCardValue(playerHand) <
@@ -131,7 +134,7 @@ def main():
 
             print('You won ${}!'.format(pot))
             money += pot
-            pot = 0  # Reset the pot.
+            pot = 0  # Reset the pot
 
         elif getCardValue(playerHand) == getCardValue(dealerHand):
             print('Push! Your bet is returned.')
