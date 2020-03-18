@@ -52,8 +52,6 @@ def main():
         deck = getDeck()
         dealerHand = [deck.pop(), deck.pop()]
         playerHand = [deck.pop(), deck.pop()]
-        # dealerHand = [('A', '♠'), ('Q', '♠')]
-        # playerHand = [('10', '♥'), ('A', '♥')]
 
         # Handle player actions:
         print('Pot:', pot)
@@ -138,14 +136,14 @@ def main():
 
             print('You won ${}!'.format(pot))
             money += pot
-            pot = 0  # Reset the pot
+            pot = 0  # Reset the pot.
 
         elif (getCardValue(playerHand) > getCardValue(dealerHand) and
               getCardValue(playerHand) == 21 and len(playerHand) > 2):
 
             print('You won ${}!'.format(pot))
             money += pot
-            pot = 0  # Reset the pot
+            pot = 0  # Reset the pot.
 
         elif getCardValue(playerHand) == getCardValue(dealerHand):
             print('Push! Your bet is returned.')
