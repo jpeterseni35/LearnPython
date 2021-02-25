@@ -21,8 +21,14 @@ for i in range(len(supplies)):
     print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
 
 
-supplies = ['pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
-            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens']
+supplies = ['pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens', 'pens',
+            'pens', 'pens']
 
 for i in range(len(supplies)):
     print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
