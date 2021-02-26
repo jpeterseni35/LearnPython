@@ -2,5 +2,6 @@
     "editor.tabCompletion": "on",
     "python.linting.pylintEnabled": true,
     "python.linting.pycodestyleEnabled": true,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "jupyter.jupyterServerType": "local"
 }
