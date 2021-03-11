@@ -4,7 +4,7 @@ import random
 print('Hello.  What is your name?')
 name = input()
 
-print('Well, ' + name + ', I am thinking of a number between 1 and 20.')
+print(f'Well {name}, I am thinking of a number between 1 and 20.')
 secretNumber = random.randint(1, 20)
 
 for guessesTaken in range(1, 7):
@@ -19,7 +19,9 @@ for guessesTaken in range(1, 7):
         break  # This condition is for the correct guess!
 
 if guess == secretNumber:
-    print('Good Job, ' + name + '! You guessed my number in ' +
-          str(guessesTaken) + ' guesses.')
+    print(
+        f'Good Job, {name}! You guessed my number in {str(guessesTaken)}'
+        f' guesses.'
+    )
 else:
-    print('Nope. the number I was thinking of was ' + str(secretNumber))
+    print(f'Nope. the number I was thinking of was {str(secretNumber)}')
